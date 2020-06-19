@@ -1,0 +1,51 @@
+<button onclick="playerSelection();onclick=computerSelection();onclick=gameRound">"hi"</button>
+
+
+<script>
+//Global variables//
+let computerScore = 0;
+let playerScore = 0;
+//tried to see if a variable would make the gameRound function work using CAWK//
+let cawk ="";
+//Random selector that chooses weapon for computer, returns selection using alert//
+    function computerSelection(){
+  let selection = ["Rock", "Paper", "Scissors"],
+   selectionvalues = selection[Math.floor(Math.random() * selection.length)];
+  alert(selectionvalues);
+}
+// prompt for you to choose your weapon//
+function playerSelection(){
+  let decision = prompt("Rock, Paper, or Scissors?");
+  alert(decision);
+}
+//results of the round, which do not currently work :(. I know I could probably use alerts
+// in place of the CAWK variable, but I wanted to see if setting it up this way would work
+//as alerts under the if functions didn't//
+function gameRound(playerSelection,computerSelection) {
+    if (playerSelection == computerSelection) {
+        (cawk == 0);
+    }
+    else if (playerSelection == "Rock" && computerSelection == "Scissors") {
+        (cawk == 1);   
+    }
+    else if (playerSelection == "Scissors" && computerSelection == "Paper") {
+        (cawk == 1);
+    }
+    else if (playerSelection == "Paper" && computerSelection == "Rock") {
+        (cawk == 1);
+    }
+    else {}
+        (cawk == 2);
+}
+
+if (cawk = 0) {
+    alert("Tie!");
+}
+else if (cawk =1) {
+    alert("Win");
+}
+else{ alert("lose") 
+}
+
+console.log(gameRound(playerSelection, computerSelection))
+</script>
